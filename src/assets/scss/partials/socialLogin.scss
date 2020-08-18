@@ -1,0 +1,30 @@
+.social-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    button {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        padding: 12px 15px;
+        margin-bottom: 13px;
+        border-radius: 7px;
+    }
+    
+    a {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        div {
+            margin-right: 10px;
+        }
+    }
+
+    .social-login--google {
+        background-color: #f13f31;
+    }
+    .social-login--facebook {
+        background-color: #3a5998;
+    }
+}
