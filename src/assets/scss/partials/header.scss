@@ -17,8 +17,9 @@
             form {
                 display: flex;
                 align-items: center;
-                span {
+                label {
                     i {
+                        cursor: pointer;
                         position: relative;
                         right: 37px;
                         color: #676767;
@@ -43,12 +44,31 @@
                 background-color: #313131;
             }
         }
-        .header__login {
-            height: 17px;
-            padding: 5px 10px;
-            margin-right: 15px;
-            border: 1px solid #367dff;
-            border-radius: 5px;
+        .header__menus {
+            display: flex;
+            align-items: center;
+            .header__login {
+                height: 17px;
+                padding: 5px 10px;
+                margin-right: 15px;
+                border: 1px solid #367dff;
+                border-radius: 5px;
+            }
+            .header__upload {
+                width: 30px;
+                height: 30px;
+                margin-right: 25px;
+                .icon-size {
+                    font-size: 30px;
+                }
+            }
+            .header__profile {
+                width: 35px;
+                height: 35px;
+                border-radius: 17.5px;
+                background-color: gray;
+                margin-right: 15px;
+            }
         }
     }
 }

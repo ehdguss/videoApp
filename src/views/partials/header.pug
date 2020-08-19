@@ -1,12 +1,20 @@
 header.header
     .header__container
         .header__logo
-            a(href="/") Video
+            a(href=routes.home) Video
         .header__search
             form(action="", method="get")
                 input(type="text" placeholder="검색" name="term")
-                input(type="submit" value="")
-                span
+                input(type="submit" value="" id="test")
+                label(for="test")
                     i.fas.fa-search
-        .header__login
-            a(href="/login") 로그인
+        .header__menus
+            if !loggedUser
+                .header__login
+                    a(href=routes.login) 로그인
+            else
+                .header__upload
+                    a(href="/upload")
+                        i.fas.fa-file-upload.icon-size
+                .header__profile
+                    img(src="")

@@ -89,7 +89,8 @@ body {
          -moz-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
-      .header .header__container .header__search form span i {
+      .header .header__container .header__search form label i {
+        cursor: pointer;
         position: relative;
         right: 37px;
         color: #676767; }
@@ -108,14 +109,39 @@ body {
       width: 50px;
       padding: 3px;
       background-color: #313131; }
-    .header .header__container .header__login {
-      height: 17px;
-      padding: 5px 10px;
-      margin-right: 15px;
-      border: 1px solid #367dff;
-      -webkit-border-radius: 5px;
-         -moz-border-radius: 5px;
-              border-radius: 5px; }
+    .header .header__container .header__menus {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .header .header__container .header__menus .header__login {
+        height: 17px;
+        padding: 5px 10px;
+        margin-right: 15px;
+        border: 1px solid #367dff;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px; }
+      .header .header__container .header__menus .header__upload {
+        width: 30px;
+        height: 30px;
+        margin-right: 25px; }
+        .header .header__container .header__menus .header__upload .icon-size {
+          font-size: 30px; }
+      .header .header__container .header__menus .header__profile {
+        width: 35px;
+        height: 35px;
+        -webkit-border-radius: 17.5px;
+           -moz-border-radius: 17.5px;
+                border-radius: 17.5px;
+        background-color: gray;
+        margin-right: 15px; }
 
 .form-container {
   display: -webkit-box;
@@ -147,6 +173,7 @@ body {
      -moz-border-radius: 5px;
           border-radius: 5px;
   margin: auto;
+  margin-top: 75px;
   padding: 15px;
   background-color: #202020; }
   .form-container .form-status {
@@ -233,8 +260,7 @@ body {
     -webkit-align-items: center;
        -moz-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    font-weight: 600; }
+            align-items: center; }
     .social-login a div {
       margin-right: 10px; }
   .social-login .social-login--google {
