@@ -12,7 +12,8 @@ import mongoose from "mongoose";
 import passport from "passport";
 
 import routes from "./routes";
-import pageRouter from "./routers/page";
+import globalRouter from "./routers/globalRouter";
+import videoRouter from "./routers/videoRouter";
 
 import "./passport";
 import { localsMiddleware } from "./middlewares";
@@ -52,6 +53,7 @@ app.use(flash());
 
 app.use(localsMiddleware);
 
-app.use(routes.home, pageRouter);
+app.use(routes.home, globalRouter);
+app.use(routes.home, videoRouter);
 
 export default app;

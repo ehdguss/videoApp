@@ -1,0 +1,78 @@
+.form-upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+    form {
+        width: 1200px;
+        height: 700px;
+        background-color: $light-black;
+        padding: 15px;
+        border: 1px solid #414141;
+        border-radius: 5px;
+        .upload-info {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #414141;
+            .upload-text {
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 5px 2px;
+            }
+            .upload-progress {
+                display: flex;
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #414141;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-right: 5px;
+                }
+                #upload-progress-now {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+        .upload-area {
+            width: 100%;
+            height: 96%;
+            .upload-area-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 150px;
+                i {
+                    color: white;
+                    margin-bottom: 30px;
+                }
+                p {
+                    color: white;
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+                #upload-file {
+                    display: none;
+                }
+                .upload-videoBtn {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    width: 70px;
+                    height: 20px;
+                    padding: 5px 10px;
+                    border-radius: 4px;
+                    background-color: #367dff;
+                    color: white;
+                }
+            }
+        }
+    }
+}

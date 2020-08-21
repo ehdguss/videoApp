@@ -48,3 +48,65 @@ export const logout = (req, res) => {
     req.logout();
     res.redirect(routes.home);
 };
+
+export const googleLogin = passport.authenticate("google", { scope: ["profile", "email", "openid"] });
+
+export const googleLoginCallback = async(_, __, profile, cb) => {
+    const {
+        _json: { id, avata_url, name, email }
+    } = profile;
+    try {
+        const user = await User.findOne({ email });
+        if(user) {
+            user.googleId = id;
+            user.save();
+            return cb(null, user);
+        }
+        const newUser = await User.create({
+            email,
+            name,
+            googleId: id,
+            avataUrl: avata_url
+        });
+        return cb(null, newUser);
+    } catch(err) {
+        return cb(err);
+    }
+};
+
+export const postGoogleLogin = (req, res) => {
+    res.redirect(routes.home);
+};
+
+export const facebookLogin = passport.authenticate("facebook", {
+    successFlash: "환영합니다",
+    failureFlash: "로그인 실패"
+});
+
+export const facebookLoginCallback = async(_, __, profile, cb) => {
+    const {
+        _json: { id, name, email }
+    } = profile;
+    try {
+        const user = await User.findOne({ email });
+        if(user) {
+            user.facebookId = id;
+            user.avataUrl = `https://graph.facebook.com/${id}/picture?type=large`;
+            user.save();
+            return cb(null, user);
+        }
+        const newUser = await User.create({
+            email,
+            name,
+            facebookId: id,
+            avataUrl: `https://graph.facebook.com/${id}/picture?type=large`
+        });
+        return cb(null, newUser);
+    } catch(err) {
+        return cb(err);
+    }
+};
+
+export const postFacebookLogin = (req, res) => {
+    res.redirect(routes.home);
+};

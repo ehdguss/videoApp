@@ -1,0 +1,19 @@
+extends layouts/main
+
+block content
+    .form-upload-container
+        form(action=routes.upload, method="post")
+            .upload-info
+                .upload-text 동영상 업로드
+                input(type="hidden" value="1" name="progress_num")
+                .upload-progress
+                    div 1
+                    div 2
+                    div 3
+            .upload-area
+                .upload-area-container
+                    i.fas.fa-upload.fa-8x
+                    p 파일을 드래그 앤 드롭하세요
+                    input(type="file" name="videoFile" accept="video/*", id="upload-file")
+                    label(for="upload-file" class="upload-videoBtn") 파일 선택
+
