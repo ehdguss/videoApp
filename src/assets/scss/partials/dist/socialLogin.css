@@ -1,0 +1,29 @@
+.social-login {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+.social-login button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin-bottom: 13px;
+  border-radius: 7px;
+}
+.social-login a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+}
+.social-login a div {
+  margin-right: 10px;
+}
+.social-login .social-login--google {
+  background-color: #f13f31;
+}
+.social-login .social-login--facebook {
+  background-color: #3a5998;
+}

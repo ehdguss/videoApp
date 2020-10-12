@@ -4,6 +4,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import morgan from "morgan";
 import helmet from "helmet";
+import csp from "helmet-csp";
 import flash from "express-flash";
 import cookieParser from "cookie-parser";
 import MongoStore from "connect-mongo";

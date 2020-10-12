@@ -4,6 +4,7 @@ const LOGIN = "/login";
 const JOIN = "/join";
 const LOGOUT = "/logout";
 const UPLOAD = "/upload";
+const UPLOAD2 = "/upload/2";
 
 const GOOGLE = "/login/google";
 const GOOGLE_CALLBACK = "/login/google/callback";
@@ -20,7 +21,8 @@ const routes = {
     googleCallback: GOOGLE_CALLBACK,
     facebook: FACEBOOK,
     facebookCallback: FACEBOOK_CALLBACK,
-    upload: UPLOAD
+    upload: UPLOAD,
+    upload2: UPLOAD2,
 };
 
 export default routes;

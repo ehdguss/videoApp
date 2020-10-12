@@ -7,3 +7,11 @@ export const home = (req, res) => {
 export const getUpload = (req, res) => {
     res.render("upload", { pageTitle: "업로드" });
 };
+
+export const getUpload2 = (req, res) => {
+    res.render("upload2", { pageTitle: "업로드" });
+};
+
+export const postUpload1 = (req, res) => {
+    console.log(req.body.videoFile);
+};
