@@ -4,13 +4,30 @@ doctype html
 
 html
     head
-        //- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* https://fontawesome.com http://localhost:4000;  'unsafe-inline' 'unsafe-eval'" />
-        
         link(href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet")
         link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.5.0/css/all.css")
         link(rel="stylesheet", href="/static/styles.css")
+
         title #{pageTitle}
     body
+        if messages.error
+            +message({
+                type: "error",
+                text: messages.error
+            })
+        else if messages.info
+            +message({
+                type: "info",
+                text: messages.info
+            })
+        else if messages.success
+            +message({
+                type: "success",
+                text: messages.success
+            })
+
         include ../partials/header
         main
             block content
+
+            script(src="/static/main.js")

@@ -7,11 +7,11 @@ block content
                 p 동영상 업로드
                 .upload-area
                     i.fas.fa-upload.fa-2x
-                    p 파일을 드래그 앤 드롭하세요
                     input(type="file" name="videoFile" accept="video/*" id="upload-file")
                     label(for="upload-file" class="upload-videoBtn") 파일 선택
                 .upload-area-complete.hide
-                    p 업로드 완료
+                    p 업로드 완료!
+                    p.upload-fileName
             .upload-info
                 .upload-info-title
                     p 제목
@@ -20,5 +20,3 @@ block content
                     p 영상 설명
                     textarea(name="desc")
             input(type="submit" value="업로드")
-
-    script(src="/static/main.js")

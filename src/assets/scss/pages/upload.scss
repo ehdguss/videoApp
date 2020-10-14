@@ -31,12 +31,8 @@
                 width: 500px;
                 padding: 20px;
                 background-color: $black;
-                border: 4px dashed lightgray;
                 border-radius: 5px;
 
-                p {
-                    margin: 10px;
-                }
                 input {
                     display: none;
                 }
@@ -49,17 +45,21 @@
                     border: 1px solid gray;
                     border-radius: 3px;
                     padding: 3px 5px;
+                    margin-top: 10px;
                     background-color: #367dff;
                 }
             }
             .upload-area-complete {
                 display: flex;
+                flex-direction: column;
                 width: 500px;
                 padding: 20px;
                 background-color: $black;
                 border-radius: 5px;
                 p {
                     margin: auto;
+                    margin-bottom: 5px;
+                    font-size: 17px;
                 }
             }
             .hide {

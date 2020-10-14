@@ -18,3 +18,23 @@ header.header
                         i.fas.fa-file-upload.icon-size
                 .header__profile
                     img(src="")
+                    li.header__profile_menus.hide
+                        ul
+                            i.fas.fa-user-circle
+                            div 프로필
+                        ul
+                            i.fas.fa-sign-out-alt
+                            div 로그아웃
+//- script.
+//-     const profileBtn = document.querySelector(".header__profile");
+//-     const profileMenus = document.querySelector(".header__profile_menus");
+
+//-     const handleProfileClick = () => {
+//-         profileMenus.classList.remove("hide");
+//-     };
+
+//-     const init = () => {
+//-         // profileBtn.addEventListener("click", handleProfileClick);
+//-         console.log("hello");
+//-     };
+//-     init();

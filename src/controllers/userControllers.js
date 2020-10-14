@@ -49,7 +49,11 @@ export const logout = (req, res) => {
     res.redirect(routes.home);
 };
 
-export const googleLogin = passport.authenticate("google", { scope: ["profile", "email", "openid"] });
+export const googleLogin = passport.authenticate("google", {
+    scope: ["profile", "email", "openid"],
+    successFlash: "환영합니다",
+    failureFlash: "로그인 실패"
+});
 
 export const googleLoginCallback = async(_, __, profile, cb) => {
     const {
