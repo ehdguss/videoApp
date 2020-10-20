@@ -4,17 +4,16 @@ import routes from "../routes";
 import {
     home,
     getUpload,
-    getUpload2,
-    postUpload1
+    postUpload
 } from "../controllers/videoController";
+import { uploadVideo, onlyPrivate } from "../middlewares";
+
 
 const videoRouter = express.Router();
 
 videoRouter.get(routes.home, home);
 
-videoRouter.get(routes.upload, getUpload);
-videoRouter.get(routes.upload2, getUpload2);
-
-videoRouter.post(routes.upload2, postUpload1);
+videoRouter.get(routes.upload, onlyPrivate, getUpload);
+videoRouter.post(routes.upload, onlyPrivate, uploadVideo, postUpload);
 
 export default videoRouter;

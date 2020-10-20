@@ -2,7 +2,7 @@ extends layouts/main
 
 block content
     .form-upload-container
-        form(action=routes.upload, method="post" class="upload-form")
+        form(action=routes.upload, method="post" class="upload-form" enctype="multipart/form-data")
             .upload-video
                 p 동영상 업로드
                 .upload-area
@@ -18,5 +18,5 @@ block content
                     input(type="text" name="title")
                 .upload-info-description
                     p 영상 설명
-                    textarea(name="desc")
+                    textarea(name="description")
             input(type="submit" value="업로드")
