@@ -7,7 +7,8 @@ const MONGODB_URL = process.env.MONGODB_URL;
 
 mongoose.connect(MONGODB_URL,
     {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useFindAndModify: false
     }
 );
 const db = mongoose.connection;

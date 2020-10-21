@@ -1,4 +1,5 @@
 import routes from "../routes";
+import User from "../models/User";
 import Video from "../models/Video";
 import Comment from "../models/Comment";
 
@@ -24,9 +25,8 @@ export const postUpload = async (req, res) => {
         creator: req.user.id
     });
 
-    console.log(newVideo);
-
-    // req.user.videos.push(newVideo.id);
+    // req.user.videos.push(newVideo.id);  
     // req.user.save();
+
     res.redirect(routes.videoDetail(newVideo.id));
-};
+}; 
